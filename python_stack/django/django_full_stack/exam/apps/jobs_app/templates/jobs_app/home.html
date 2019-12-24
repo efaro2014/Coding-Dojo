@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+</head>
+<body>
+    <p>Hello, {{request.session.user_id}} </p>
+    <p>Everyones jobs: </p>
+    <a href="logout">Logout</a>
+    <button ><a href="jobs"> New Job!</a></button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Job</th>
+                <th scope="col">Location</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <thead>
+            {% for job in all_jobs reversed %}
+            <tr>
+                <td>{{job.id}}</td>
+                <td>{{job.title}}</td>
+                <td>{{job.location}}</td>
+                <td><a href="jobs/{{job.id}}">view</a> |
+                    {% if job.user.id == request.session.user_id %} 
+                        <a href="jobs/{{job.id}}/remove">Remove</a> | <a href="/jobs/edit/{{job.id}}">Edit</a>
+                    {% else %}
+                        <p>other's</p>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </thead>
+    </table>
+</body>
+</body>
+</html>

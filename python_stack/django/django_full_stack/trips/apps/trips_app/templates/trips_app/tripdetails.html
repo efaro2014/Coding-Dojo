@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .details{
+            width: 200px;
+            min-height: 400px; 
+            border: solid black;
+            margin: 15px;
+        }
+        </style>
+</head>
+<body>
+    <h4>Hello {{request.session.first_name}}! This is your trip!</h4> 
+    <a href="logout">Logout</a>
+    <a href="main_page">Home</a>
+    <p>{{trip.destination}}</p>
+    <div class="details">
+        <p>Start_date: {{trip.start_date}}</p>
+        <p>Start_date: {{trip.end_date}}</p>
+        <p>Plan: {{trip.plan}}</p>
+        <p>Created_at: {{trip.created_at}}</p>
+        <p>Updated_at: {{trip.updated_at}}</p>
+    </div>
+</body>
+</html>

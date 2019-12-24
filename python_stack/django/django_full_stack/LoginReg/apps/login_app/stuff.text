@@ -1,0 +1,43 @@
+
+def register(request):
+
+# print(request.method)
+if request.method == 'POST':
+    errors = User.objects.basic_validator(request.POST)
+    if len(errors) > 0:
+        for key, value in errors.items():
+            messages.error(request, value)
+        # print("DATA HAD ERRORS")
+        return redirect('/')
+    else:
+        first_name = request.POST["first_name"]
+        last_name = request.POST["last_name"]
+        email = request.POST["email"]
+        pw = request.POST["pw"]
+        user = User.objects.create(first_name=first_name, last_name=last_name, email=email, password=pw)
+        # print("creatingUSER")
+        messages.success(request, "You have been logged out")
+        request.session['user_id'] = user.id
+        return redirect('/success')
+
+        
+def login(request):
+    errors = {}
+    if request.method == "POST":
+        other_user = User.objects.filter(email = request.POST['email'])
+        try:
+            this_user = other_user[0]
+            print(this_user.first_name)
+            if request.POST['password'] == this_user.password:
+                request.session['first_name'] = this_user.first_name
+                user = User.objects.get(email = request.POST["email"]).id
+                print(user)
+                request.session['user_id'] = user
+                return redirect("/success")
+            errors["password"] = "You forgot your password"
+        except:
+            errors['email']= "No user exists here, go ahead and register"
+    if len(errors)>0:
+        for key, value in errors.items():
+            messages.error(request, value)
+    return redirect("/")

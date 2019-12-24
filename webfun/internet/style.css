@@ -1,0 +1,159 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 950px;
+    min-height: 600px;
+    background-color: blanchedalmond;
+    margin: auto;
+}
+.container img{
+    width: 50px;
+    height: 50px;
+}
+.container img,h1{
+    display: inline-block;
+    /* padding: 10px; */
+}
+.container h1{
+    vertical-align: top;
+}
+.header{
+    height: 50px;
+    background-color: gray;
+    margin-top: -15px;
+}
+.header h1{
+    padding: 5px;
+    color: white;
+}
+.navigation, .main-page, #phone, #home{
+    display: inline-block;
+    vertical-align: top;
+}
+.navigation{
+    width: 220px;
+    min-height: 100px;
+    padding: 10px 0px 15px;
+}
+
+#about p{
+    margin: 10px;
+}
+#internet{
+    color: red;
+}
+#video button{
+    width: 180px;
+    height: 35px;
+    background-color: royalblue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+#resources button{
+    background-color: orange;
+}
+#video a{
+    text-decoration-line: none;
+    color: white;
+}
+#line{
+    width: 250;
+}
+.ad{
+    width: 100%;
+    min-height: 300px;
+    background-image: url(ad_background.png);
+    margin-top: 20px;
+    text-align: center;
+}
+.ad h1{
+    color: white;
+}
+.ad img{
+    width: 100px;
+    height: 130px;
+}
+#Learn button{
+    width: 180px;
+    height: 35px;
+    background-color: royalblue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+#Learn a{
+    text-decoration-line: none;
+    color: white;
+}
+.main-page{
+    width: 680px;
+    min-height: 500px;
+    margin-left: 10px;
+}
+#header{
+    min-height: 60px;
+    border: solid black;
+}
+#home img ,h2{
+    vertical-align: top;
+    display: inline-block;
+    /* width: 100px;
+    height: 20px; */
+
+}
+#phone{
+    margin-left: 390px;
+    width: 174px;
+    height: 30px;
+}
+#text p{
+    font-size: 10px;
+}
+#pic, #text{ 
+    display: inline-block
+}
+#tele p{
+    color: blue;
+    font-size: 20px;
+}
+ .client {
+    padding-left: 20px;
+    text-align: initial;
+} 
+#client_server{
+    text-align: center;
+}
+#client_server img{
+    width: 200px;
+    height: 100px;
+}
+.web{
+    width: 650px;
+    min-height: 100px;
+    margin-right:20px;
+    margin-top: 10px;
+    border: solid blue;
+    border-bottom: none;
+    padding: 10px;
+}
+
+#html, .big{
+    display: inline-block;
+    vertical-align: top;
+}
+#html img{
+    width: 100px;
+    height: 90px;
+}
+
+.big{
+    width: 500px;
+    padding-left: 10px;
+}
+.big a{
+    text-decoration-line: none;
+}

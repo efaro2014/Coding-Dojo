@@ -1,0 +1,134 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+   }
+   .container{
+    width: 950px;
+    height: 1000px;
+    background-color: whitesmoke;
+    margin: 0px auto;
+    padding-bottom: 30px;
+   }
+   #header,h1{
+    font-size: 35px;
+    color: rgb(17, 17, 17);
+    text-align: left;
+    display: inline-block;
+   }
+   #header,h2{
+    font-size: 30px;
+    color: rgb(105, 61, 61);
+    padding: 10px;
+    display: inline-block;
+    margin-left: 85px;
+   }
+   .top{
+    height: 300px;
+    width: 890px;
+    background-color: rgb(116, 51, 4);
+    margin: 0px auto;
+    /* margin-bottom: 30px; */
+    font-size: 25px;
+    color: blanchedalmond;
+    padding: 10px;
+    text-align: left;
+   }
+   .left{
+    min-height: 300px;
+    width: 400px;
+    background-color: whitesmoke;
+    margin: 10;
+    vertical-align: top;
+    display: inline-block;
+   }
+   .left img{
+    min-height: 300px;
+    width: 400px;
+    border: whitesmoke 5px;
+
+   }
+   .right{
+    min-height: 305px;
+    width: 450px;
+    background-color:wheat;
+    display: inline-block;
+    font-size: 35px;
+    color: black;
+    text-align: left;
+    border: coral 5px;
+    margin-left:5px;
+   }
+  .about{
+    min-height: 31px;
+    width: 450px;
+    background-color:rgb(150, 149, 147);
+    color: whitesmoke;
+  }
+   #para{
+    margin-top: 25px;
+    font-size: 15px;
+
+   }
+   .bottom{
+    height: 500px;
+    width: 890px;
+    background-color:rgb(116, 51, 4);
+    margin: auto;
+    font-size: 25px;
+    color: blanchedalmond;
+    padding: 10px;
+    text-align: left;
+   }
+   .bottomleft,.bottommiddle,.bottomright {
+    min-height: 480px;
+    width: 274px;
+    background-color: wheat;
+    /* padding: 10px; */
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 13px;
+   }
+   .Lamode{
+    min-height: 31px;
+    width: 274px;
+    background-color:rgb(150, 149, 147);
+    color: whitesmoke;
+   }
+   .bottomleft img,.bottommiddle img, .bottomright img{
+    min-height: 100px;
+    width: 274px;
+    border: whitesmoke 5px;
+   }
+   #paragraph{
+    font-size: 15px;
+    color: black;
+   }
+   .bottomfirst{
+    min-height: 150px;
+    width: 274px;
+    background-color: wheat;
+    /* padding: 10px; */
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 13px;
+   }
+    .bottomfirst img, .bottomsecond img, .bottomthird img{
+    min-height: 37px;
+    width: 37px;
+    padding: 5px;
+    border: whitesmoke 5px;
+    }
+    .button{
+      text-decoration: none;
+      display: inline-block;
+      height: 50px;
+      background-color: green;
+      color: honeydew;
+      text-align: center;
+    }
+   #main_content, #navigation {
+    display: inline-block;
+    border-radius: 20px;
+    background: olivedrab;
+   }

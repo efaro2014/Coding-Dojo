@@ -1,0 +1,58 @@
+Books
+C_sharp = Book.objects.create(title ="C sharp", desc = 'Jack mack efi dop doh')           
+PHP = Book.objects.create(title ="PHP", desc = 'Jack mack efi dop doh')  
+python = Book.objects.create(title = 'Python', desc = 'Dop manaul')     
+java = Book.objects.create(title = "java", desc = 'Jack mack efi dop doh')                                                                                                                                                             
+java_script = Book.objects.create(title = "java", desc = 'Jack mack efi dop doh')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           In [5]: java.save()                                                                                                                                                                                                                           
+  
+author 
+py = Author.objects.create(first_name= 'Zack', last_name = "brown")
+jv =Author.objects.create(first_name= 'chicken', last_name = "fries")
+js = Author.objects.create(first_name= 'Efi', last_name = "Jana")
+ph = Author.objects.create(first_name= 'Zabenck', last_name = "brown")
+c = Author.objects.create(first_name= 'DJ kaleab', notes = 'dingdang', last_name = "brown")
+
+Query: Change the name of the C Sharp book to C#
+x = Book.objects.get(id = 4)
+x.title = 'C#'
+x.save()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
+Change the first name of the 4th author to Bill
+author = Author.objects.get(id = 4)
+author.first_name = 'Bill'
+author.save()
+
+Query: Assign the first author to the first 2 books
+py = Author.objects.get(id = 1)
+python = Book.objects.get(id=1)
+java = Book.objects.get(id=2)
+py.books.add(python)
+py.books.add(java)
+
+Query: Assign the second author to the first 3 books
+C_sharp = Book.objects.get(id = 3)
+jv = Author.objects.get(id= 2)
+jv.books.add(python, java, C_sharp)
+
+Assign the third author to the first 4 books
+js = Author.objects.get(id = 3)
+PHP = Book.objects.get(id=4)
+js.books.add(python, C_sharp, PHP)
+
+Query: Assign the fourth author to the first 5 books (or in other words, all the books)
+ph = Author.objects.get(id=4)
+JS = Book.objects.get(id=5)
+ph.books.add(JS, python, PHP, C_sharp)
+
+Query: Retrieve all the authors for the 3rd book
+C_sharp.authors.all().values()
+
+Add the 5th author as one of the authors of the 2nd book
+c = Author.objects.get(id = 5)
+java.authors.add(c)
+
+Query: Find all the books that the 3rd author is part of
+js.books.all().values()
+
+Query: Find all the authors that contributed to the 5th book
+JS.authors.all().values()

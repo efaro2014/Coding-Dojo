@@ -1,0 +1,10 @@
+.box{
+    width: 500px;
+    height: 500px;
+    border: black solid;
+    padding: 20px;
+}
+.box form{
+    display: inline;
+
+}

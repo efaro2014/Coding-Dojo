@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .container{
+            width: 500px;
+            min-height: 500px;
+            border: darkblue solid;
+        }
+        .form, .table{
+            width: 200px;
+            min-height: 300px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Add a Book</h1>
+            
+            <form action="/" method="POST">
+                {% csrf_token %}
+            Title: <input type="text" name="title">
+            <br>
+            Desc: <input type="text" name="desc">
+            <br>
+            <button>Add</button>
+            </form>
+        </div>
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                  <tr>
+                    <td>{{book.id}}</td>
+                    <td>{{book.title}}</td>
+                    <td><a href="/books/{{book.id}}">View</a></td>
+                  </tr>
+                  {% endfor %}
+                 
+                </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

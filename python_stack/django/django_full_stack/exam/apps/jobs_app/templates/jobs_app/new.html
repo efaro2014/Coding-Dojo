@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Trips</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>
+        .table{
+            width: 200px;
+            min-height: 400px; 
+            border: solid black;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h6>Hello, {{request.session.first_name}} , create a job</h6>
+    <a href="logout">Logout</a>
+    <div class="table">
+        <form action="/jobs/new" method="POST">
+            {% csrf_token %}
+            Title:
+            <input type="text" name="title">
+            <br>
+            <br>
+            Description:
+            <input type="text" name="description">
+            <br>
+            <br>
+            Location:
+            <input type="text" name="location">
+            <br>
+            <br>
+            <Button><a href="back">Cancel</a> </Button> <Button>Submit</Button>
+        </form>
+        <div>
+                {% if messages %}
+            <ul class="messages">    
+                {% for message in messages %}    
+            <li {% if message.tags %} class="{{ message.tags }}"
+                {% endif %}>{{ message }}</li>    
+                {% endfor %}
+            </ul>
+                {% endif %}
+            </div>
+    </div>   
+</body>
+</html>
+
+

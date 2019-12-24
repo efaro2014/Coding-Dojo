@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+</head>
+<body>
+    <p>Hello, {{request.session.first_name}} </p>
+    <a href="logout">Logout</a>
+    <button >create a new Trip</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Destinations</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col"> Plan </th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <thead>
+            {% for trip in all_trips %}
+            <tr>
+                <td>{{trip.id}}</td>
+                <td>{{trip.destination}}</td>
+                <td>{{trip.start_date}}</td>
+                <td>{{trip.end_date}}</td>
+                <td>{{trip.plan}}</td>
+                <td><a href="remove">Remove</a> | <a href="Edit">Edit</a></td>
+            </tr>
+            {% endfor %}
+        </thead>
+    </table>
+</body>
+</body>
+</html>

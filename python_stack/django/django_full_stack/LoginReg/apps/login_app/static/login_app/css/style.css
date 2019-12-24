@@ -1,0 +1,25 @@
+* {
+    font-family: monospace;
+}
+
+.left_content, .right_content {
+    width: 325px;
+    display: inline-block;
+    margin: 30px;
+    padding: 30px;
+    vertical-align: top;
+}
+.button {
+    margin: 25px;
+    box-shadow: indigo 10px 10px;
+
+}
+input {
+    margin: 0 20px;
+    float: right;
+    box-shadow: indigo 10px 10px;
+}
+.container {
+    width: 65%;
+    margin: auto;
+}

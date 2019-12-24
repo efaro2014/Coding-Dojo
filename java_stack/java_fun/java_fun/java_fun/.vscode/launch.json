@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Songs",
+            "request": "launch",
+            "mainClass": "Songs"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Odd",
+            "request": "launch",
+            "mainClass": "Odd"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Average",
+            "request": "launch",
+            "mainClass": "Average"
+        }
+    ]
+}

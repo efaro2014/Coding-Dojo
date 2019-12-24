@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Shows</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+    <style>
+    </style>
+</head>
+<body>
+    <h4>All Shows</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Network</th>
+                <th scope="col">Release Date</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <thead>
+            {% for show in all_shows%}
+            <tr>
+                <td>{{show.id}}</td>
+                <td>{{show.title}}</td>
+                <td>{{show.network}}</td>
+                <td>{{show.release_date}}</td>
+                <td>{{show.description}}</td>
+                <td><a href="/read/{{show.id}}">Show </a> | <a href="/read/{{show.id}}/edit">Edit </a>
+                     | <a href="/read/{{show.id}}/delete">Delete </a></td>
+            </tr>
+            {% endfor %}
+        </thead>
+    </table>
+</body>
+</html>
+
+<!-- {% for author in authors %}
+<tr>
+    <td>{{author.id}}</td>
+    <td>{{author.first_name}}</td>
+    <td><a href="authors/{{author.id}}">Action</a></td>
+</tr>
+{% endfor %} -->

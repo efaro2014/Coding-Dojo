@@ -1,0 +1,155 @@
+*{
+ margin: 0px;
+ padding: 0px;   
+}
+.container{
+    width: 970px;
+    height: 1000px;
+    background-color: whitesmoke;
+    margin: 0px auto;
+   }
+.python{
+    height: 500px;
+    width: 970px;
+    background-color: #245076;
+    /* vertical-align: top; */
+    }
+ #python, .Lefttop, .getting-started, .applications{
+    display: inline-block;
+    vertical-align: top;
+}
+.Lefttop{
+    margin-left: 50px;
+    padding: 25px;
+}
+#python img{
+    width: 20px;
+    height: 15px;
+    vertical-align: top;
+}
+.Textsize a, p{
+    font-size: 15px;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    /* margin-left: 100px; */
+}  
+.Textsize a{
+    color: greenyellow;
+}
+.Search{
+    width: 200px;
+    height: 30px;
+    background-color: gray;
+    padding: 10px; 
+    border-radius: 5px;
+}
+#search{
+    width: 150px;
+    height: 20px;
+    background-color: honeydew;
+    text-align: center;
+}
+#search, #go{
+    vertical-align: center;
+    display: inline-block;
+    margin: 5px;
+}
+#go{
+    background-color: indigo;
+    color: ivory;
+    border-radius: 5px;
+}
+.menu {
+    width: 850px;
+    height: 25px;
+    padding: 10px;
+    background-color: blue;
+    margin: auto;
+    border-radius: 10px;
+    
+}
+#mainmenu p{
+    margin-left:28px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.maincontent{
+    margin: 25px; 
+}
+.list, .paragraphs{
+    margin: 25px; 
+    display: inline-block;
+    vertical-align: top;
+}
+.list{
+    font-size: 15px;
+    width: 200px;
+    color: white;
+    margin:auto; 
+    text-align: center;  
+}
+.paragraphs{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    margin:auto;
+}
+#intro{
+    padding: 15px;
+}
+#poem p{
+    font-size: 20px;
+    width: 350px;
+    text-align: center;
+    color: red;
+    padding: 5px;
+}
+#last h3{
+    padding: 5px;
+    color: seashell;
+}
+.lower-content{
+    padding: 45px;
+    height: 200px;
+}
+.getting-started{
+    width: 390px;
+    height: 200px;
+    text-align: center;
+    border-top: solid blue 5px;
+    margin-left:20px;
+    margin-right: 10px;
+}
+.getting-started h3, .applications h3{
+    padding: 10px;
+}
+#parag p{
+    text-align: center;
+    color: black;
+}
+.getting-started li{
+    color: blue;
+}
+#list{
+    width: 250px;
+    margin:auto;
+}
+.footer{
+    height: 60px;
+    /* width:fit-content; */
+    background-color: #245076;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    
+}
+#footermenu p{
+    padding: 15px;
+    font-size: 20px;
+}
+#copyright p{
+    color: brown;
+}
+

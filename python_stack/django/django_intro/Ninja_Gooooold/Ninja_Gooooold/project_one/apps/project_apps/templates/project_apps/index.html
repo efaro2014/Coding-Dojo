@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Gold redoooo</title>
+    {% load static %}	
+    <link rel="stylesheet" href="{% static 'project_apps/css/style.css' %}"> 
+</head>
+<body>
+    <h3>Your Gold {{request.session.bank}}</h3>
+    <div>
+        <form class="boxymcboxypants" method="POST" action="/submit">
+            {% csrf_token %}
+            <input type="hidden" name="location" value="farm">
+            <h1>Farm</h1>
+            <h3>Earns 10-20 Gold</h3>
+            <input type="submit" value="Gold!">
+        </form>
+        <form class="boxymcboxypants" method="POST" action="/submit">
+            {% csrf_token %}
+            <input type="hidden" name="location" value="cave">
+            <h1>Cave</h1>
+            <h3>Earns 5-10 Gold</h3>
+            <input type="submit" value="Gold!">
+        </form>
+        <form class="boxymcboxypants" method="POST" action="/submit">
+            {% csrf_token %}
+            <input type="hidden" name="location" value="house">
+            <h1>Couch cushions</h1>
+            <h3>Earns 2-3 Gold</h3>
+            <input type="submit" value="Gold!">
+        </form>
+        <form class="boxymcboxypants" method="POST" action="/submit">
+            {% csrf_token %}
+            <input type="hidden" name="location" value="casino">
+            <h1>Casino</h1>
+            <h3>you know...</h3>
+            <input type="submit" value="Gold!">
+        </form>
+    </div>
+    <div class="textbox">
+        You've done well young ninja business man. but can you dance?
+    </div>
+</body>
+</html>

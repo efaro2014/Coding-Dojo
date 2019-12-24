@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wall Assignment</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h4>CodingDojo Wall </h4>
+            <p>Welcome {{user.first_name}}</p>
+            <a href="/">log off</a>
+        </div>
+        <form action="/wall/wall" method="POST" id="msg">
+            {% csrf_token %}
+            <p>Post a message</p>
+            <textarea name="message"></textarea>
+            <button type="submit">Post a message</button>
+        </form>
+        {% for message in all_messages reversed %}
+        <p> {{message.msg_text}} </p>
+        <!-- <form action=""></form> -->
+            {% for comment in message.comments.all %}
+                <p> {{comment.cmt_text}} </p>
+                <form action="wall/delete" method="POST">
+                    {% csrf_token %}
+                <input type="hidden" name="destroy" value="{{comment.id}}">
+                <button type="submit">Delete</button>
+                </form>
+            {% endfor %}
+        
+        <form action="wall/message" method="POST">
+            {% csrf_token %}
+            <textarea name="comments"></textarea>
+            <input type="hidden" name="message_id" value="{{message.id}}">
+            <button type="submit">Post a comment</button>
+        </form>
+        
+        {% endfor %}
+    </div>
+
+</body>
+</html>

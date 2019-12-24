@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Gold</title>
+<style>
+    .container{
+        width: 800px;
+        height: 500px;
+        border: black solid;
+    }
+    .places{
+        width: 170px;
+        min-height: 150px;
+        display: inline-block;
+        vertical-align: top;
+        border:solid green;
+        margin-left:10px;
+
+    }
+    .places h4, p{
+        padding: 5px;
+    }
+    .activities{
+        margin: auto;
+        width: 750px;
+        height: 200px;
+        border: indigo solid;
+        margin-top: 20px;
+    }
+</style>
+
+</head>
+<h1>Ninja Gold</h1>
+<body>
+    <div class="container">
+        <p> Your Gold is : {{gold}}</p>
+        <div class="places">
+                <h4>Farm</h4>
+                <p>earns 10-20 golds</p>
+        <form action="process_money" method="POST">
+            <input type="hidden" name="building" value="farm">
+            <input type="submit" value="Find GOld">
+            </form>
+        </div>
+        <div class="places">
+                <h4>Farm</h4>
+                <p>earns 5-10 golds</p>
+            <form action="process_money" method="POST">
+                <input type="hidden" name="building" value="cave">
+                <input type="submit" value="Find GOld">
+            </form>
+        </div>
+        <div class="places">
+                <h4>Farm</h4>
+                <p>earns 2-5 golds</p>
+            <form action="process_money" method="POST">
+                <input type="hidden" name="building" value="house">
+                <input type="submit" value="Find GOld">
+            </form>
+        </div>
+        <div class="places">
+                <h4>Casino</h4>
+                <p>earns/loses 0-50 golds</p>
+            <form action="process_money" method="POST">
+                <input type="hidden" name="building" value="casino">
+                <input type="submit" value="Find GOld">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

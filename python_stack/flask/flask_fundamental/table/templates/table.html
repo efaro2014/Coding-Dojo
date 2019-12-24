@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table of Students</title>
+    <style>
+        .name{
+            width: 600px;
+            height: 600px;
+            border: blueviolet, solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <h1>Table of names</h1>
+        {% for user in (names)%}
+        <p>{{user['first_name']}} {{user['last_name']}} </p>
+        {% endfor %}
+    </div>
+</body>
+</html>

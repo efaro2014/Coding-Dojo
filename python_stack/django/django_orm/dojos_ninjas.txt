@@ -1,0 +1,35 @@
+1.  Create 3 new dojos 
+one = Dojos.objects.create(name = 'Dojo_silicon_valley', city='Oakland', state = 'CA')
+two = Dojos.objects.create(name = 'Dojo_northern', city='Seattle', state = 'WA')
+three = Dojos.objects.create(name = 'Dojo_east_coast', city='New Yord', state = 'NY')
+2.  Delete the 3 dojos you just created
+one = Dojos.objects.all()
+one.delete()
+3. Create 3 more dojos
+four = Dojos.objects.create(name = 'Dojo_midwest', city='Columbus', state = 'OH')
+five = Dojos.objects.create(name = 'Dojo_northeastern', city='Boston', state = 'MA')
+six = Dojos.objects.create(name = 'Dojo_southern', city='Dallas', state = 'TX')
+4.Create 3 ninjas that belong to the first dojo
+one= Ninjas.objects.create(first_name="Little Women", last_name = 'efi', dojos_id = '5')
+two = Ninjas.objects.create(first_name = 'mario', last_name = 'tegay', dojos_id = '5')
+three = Ninjas.objects.create(first_name = 'mario', last_name = 'tegay', dojos_id = '5')
+5. Create 3 ninjas that belong to the second dojo
+one= Ninjas.objects.create(first_name="Little Women", last_name = 'efi', dojos_id = '6')
+two = Ninjas.objects.create(first_name = 'mario', last_name = 'tegay', dojos_id = '6')
+three = Ninjas.objects.create(first_name = 'mario', last_name = 'tegay', dojos_id = '6')
+
+6.Create 3 ninjas that belong to the third dojo
+one= Ninjas.objects.create(first_name="Little Women", last_name = 'efi', dojos_id = '7')
+two = Ninjas.objects.create(first_name = 'mario', last_name = 'tegay', dojos_id = '7')
+three = Ninjas.objects.create(first_name = 'mario', last_name = 'tegay', dojos_id = '7')
+
+7. Retrieve all the ninjas from the first dojo
+ Ninjas.objects.get(dojos_id = '5')
+
+8.Retrieve all the ninjas from the last dojo
+ Ninjas.objects.last(ninjas)
+
+9.Retrieve the last ninja's dojo
+Dojos.objects.last(ninjas)
+10. Create a new dojo
+	Dojos.objects.create(name ="dojo_abroad", city ="paris", state ='France')

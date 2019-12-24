@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="process.php" method="post">
+        <p>Please Register</p>
+        First Name: <input type="text"  name="first_name">
+        Last Name: <input type="text" name="last_name">
+        Email: <input type="text" name="email">
+       
+        <p>Select your gender:</p>
+        Male <input type="radio"  name="gender" value="male">
+        Famale <input type="radio" name="gender" value="female">
+       
+        <p>Select 3 of your favorite colors:</p>
+        Blues: <input type="checkbox" name="color" value="blue">
+        
+        <label for="green">Green</label>
+        <input type="checkbox" id="green" name="color" value="green">
+       
+        <label for="red">Red</label>
+        <input type="checkbox" id="red" name="color" value="red">
+        
+        <label for="black">Black</label>
+        <input type="checkbox" id="black" name="color" value="black">
+       
+        <label for="purple">Purple</label>
+        <input type="checkbox" id="purple" name="color" value="Purple">
+        
+        <p>Say a few words about yourself:</p>
+        <textarea name="description"></textarea>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+       <label for="pw_confirm">Password Confirmation:</label>
+       <input type="password" id="pw_confirm" name="password_confirmation">
+       <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+       
+      Comment Optional: <textarea name="description"></textarea>
+       <input type="submit" value="Click here to register">
+
+    </form>
+    
+</body>
+</html>

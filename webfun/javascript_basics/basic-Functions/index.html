@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function a(){
+        return 35
+    }
+    console.log(a())
+</script>
+<script>
+    function a(){
+        return 4;
+    }
+   console.log(a()+a());
+</script>
+<script>
+function lowestandhighest(arr){
+    var max=0
+    var min =0 
+    for(i=0; i<arr.length; i++){
+        if (arr[i]> max){
+            max=arr[i];
+            return max;
+        }
+        else if (arr[i]<min){
+            min=arr[i];
+            console.log(min);
+        }
+    }
+    console.log(max)
+}
+var arr=[1,3,25,-1,6];
+lowestandhighest((arr));
+function firstOdd(arr){
+    var newarr=[]
+    for(var i =0; i<arr.length;i++){
+        if(i%2!=0){
+            newarr.push(i);
+        return newarr[0];
+        }
+    }
+    console.log(arr.slice(1,arr.length));
+}
+firstOdd([1,3,2,5,4,7]);
+console.log(firstOdd([1,3,2,5,4,7]));
+// console.log()
+</script>
+</body>
+</html>

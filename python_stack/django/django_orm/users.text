@@ -1,0 +1,28 @@
+1. Create 3 new users
+	one = Users.objects.create(first_name="Irene", last_name="Anthony", email_address="Me@hotmail.com", age="25")
+	two = Users.objects.create(first_name="Efrem", last_name="Ghebreab", email_address="ef@gmail.com", age="32")
+	three = Users.objects.create(first_name="Loki", last_name="Anthony", email_address="LokiIsACutiePie@Gmail.com", age="4")
+
+2.Retrieve all users
+	all = Users.objects.all()
+
+3.Retrieve the last user
+	last = Users.objects.last()
+
+4.Retrieve the first user
+	first = Users.objects.first()
+
+5.Change the user with id = 3 so their last name is Pancakes.
+	name = User.objects.get(id = 3)
+	name.last_name = Pancakes
+	name.save()
+
+6.Delete the user with id = 2 from the database.
+	gone = Users.object.get(id = 2)
+	gone.delete()
+
+7.Get all the users, sorted by their first name
+	Users.objects.all.ordered_by(first_name)
+
+8.Get all the users, sorted by their first name in descending order
+    Users.objects.all.ordered_by(-first_name)

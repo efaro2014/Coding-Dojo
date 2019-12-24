@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>   
+    
+    <script>
+        $(document).ready(function(){
+                $.get("https://pokeapi.co/api/v2/pokemon/1/", function(res){
+                var pokeImg = res['sprites']['front_default']
+                // console.log(res['sprites']['front_default']);
+                // $("#bulbasaur").html(res['name']);
+                var pokes = ''
+                for(var i =0; i<51; i++){
+                    poke +='https://pokeapi.co/api/v2/pokemon';
+                }
+                return pokes
+                $('img').attr('src', pokeImg)
+                console.log(res);
+            })
+        })
+    </script>
+    
+</head>
+<body>
+    <div id="bulbasaur"></div>
+    <img src="" alt="">
+</body>
+</html>
